@@ -15,6 +15,8 @@
 		8B7D4B8626899F7900A596DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B7D4B8426899F7900A596DB /* LaunchScreen.storyboard */; };
 		8B7D4B9126899F7900A596DB /* FaceScannerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7D4B9026899F7900A596DB /* FaceScannerDemoTests.swift */; };
 		8B7D4B9C26899F7900A596DB /* FaceScannerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7D4B9B26899F7900A596DB /* FaceScannerDemoUITests.swift */; };
+		8B7D4BB32689AB1E00A596DB /* FaceScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7D4BB12689AAC600A596DB /* FaceScanner.framework */; };
+		8B7D4BB42689AB1E00A596DB /* FaceScanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7D4BB12689AAC600A596DB /* FaceScanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8B7D4BAE2689A94D00A596DB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8B7D4BB42689AB1E00A596DB /* FaceScanner.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8B7D4B7626899F7600A596DB /* FaceScannerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceScannerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7D4B7926899F7600A596DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,7 @@
 		8B7D4B9726899F7900A596DB /* FaceScannerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceScannerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7D4B9B26899F7900A596DB /* FaceScannerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceScannerDemoUITests.swift; sourceTree = "<group>"; };
 		8B7D4B9D26899F7900A596DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B7D4BB12689AAC600A596DB /* FaceScanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaceScanner.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B7D4BB32689AB1E00A596DB /* FaceScanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +117,7 @@
 		8B7D4B7826899F7600A596DB /* FaceScannerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8B7D4BB12689AAC600A596DB /* FaceScanner.framework */,
 				8B7D4B7926899F7600A596DB /* AppDelegate.swift */,
 				8B7D4B7B26899F7600A596DB /* SceneDelegate.swift */,
 				8B7D4B7D26899F7600A596DB /* ViewController.swift */,
@@ -138,6 +157,7 @@
 				8B7D4B7226899F7600A596DB /* Sources */,
 				8B7D4B7326899F7600A596DB /* Frameworks */,
 				8B7D4B7426899F7600A596DB /* Resources */,
+				8B7D4BAE2689A94D00A596DB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -438,6 +458,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5DY39F2BR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceScannerDemo",
+				);
 				INFOPLIST_FILE = FaceScannerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +481,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5DY39F2BR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceScannerDemo",
+				);
 				INFOPLIST_FILE = FaceScannerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
